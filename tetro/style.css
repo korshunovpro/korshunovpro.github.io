@@ -1,0 +1,108 @@
+body {
+    width: 800px;
+    margin:0 auto;
+}
+
+td {
+    width:15px;
+    height:15px;
+    border:1px solid #000;
+    position: relative;
+    text-align: center;
+    font-size:11px;
+    line-height:15px;
+    vertical-align: top;
+}
+
+td.block {
+    top:0;
+    left:0;
+    background: #000;
+    color: #fff;
+}
+
+.block:before {
+    position: absolute;
+    display: block;
+    width:16px;
+    height:16px;
+    text-align: center;
+    content: "1";
+    color: #fff;
+    opacity: 0.5;
+}
+
+td.o {
+    position: relative;
+    background: #a2ec95;
+}
+
+td.o:before {
+    width:15px;
+    position: absolute;
+    display: block;
+    text-align: center;
+    content: "0";
+    opacity: 0.5;
+    color: #000;
+}
+
+#bucket, #settings {
+    float: left;
+    margin-right:20px;
+}
+
+label {
+    display: block;
+}
+
+div.div {
+    width:250px;
+    float: left;
+}
+
+div.clear {
+    clear: both;
+}
+
+/*spawn offset rows 21-23*/
+/*table tr:nth-child(1) td,*/
+/*table tr:nth-child(2) td,*/
+/*table tr:nth-child(3) td {*/
+    /*opacity: 0.2;*/
+    /*border-color: transparent;*/
+/*}*/
+
+/*table tr:nth-child(1) td.o,*/
+/*table tr:nth-child(2) td.o,*/
+/*table tr:nth-child(3) td {*/
+    /*opacity: 0;*/
+/*}*/
+
+table
+{
+    list-style-type:none;
+    padding:0 0 0 1em;
+
+    counter-reset:eg3 21;
+}
+table > tr
+{
+    counter-increment:eg3 -1;
+}
+table > tr:before
+{
+    content:counter(eg3) "";
+    font-weight:normal;
+    opacity: 0.5;
+    font-size:11px;
+}
+
+td.block.red {background: red;}
+td.block.green {background: green;}
+td.block.yellow {background: yellow;}
+td.block.magenta {background: magenta;}
+td.block.cyan {background: cyan;}
+td.block.orange {background: orange;}
+td.block.blue {background: blue;}
+

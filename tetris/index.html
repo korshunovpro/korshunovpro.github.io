@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ТЕТРИС: Classic</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tetramino.css">
+</head>
+<body class="splash" oncontextmenu="return false">
+<!--<body>-->
+    <div class="texture"></div>
+    <div class="backgroundImage"></div>
+    <div class="overlay"></div>
+    <div id="gameWrapper" class="blur">
+
+        <!--SPLASH-->
+        <div id="splash"></div>
+
+        <!--START PAGE-->
+        <div id="startPage">
+            <div id="h1"></div>
+            <h3 class="title">classic</h3>
+            <div class="controls">
+                <div class="btn new" onclick="GAMES.tetramino.game.newGame('classic')"><span>Новая игра</span></div>
+                <div class="btn audio" onclick="GAMES.tetramino.game.Sound.soundOnOff()"><span>Выкл. звук</span></div>
+                <div class="btn info" onclick="GAMES.tetramino.game.showModal('info')"><span>Информация</span></div>
+            </div>
+        </div>
+
+        <!--GAME-->
+        <div id="game">
+
+            <div id="leftBar">
+                <div id="bucketWrapperHold"></div>
+                <div class="controls">
+                    <div class="btn new" onclick="GAMES.tetramino.game.showModal('startNewGame')"><span>Новая игра</span></div>
+                    <div class="btn pause" onclick="GAMES.tetramino.game.pause()"><span>Пауза</span></div>
+                    <div class="btn start" onclick="GAMES.tetramino.game.showModal('endOfGame')"><span>Главное меню</span></div>
+                    <div class="btn audio" onclick="GAMES.tetramino.game.Sound.soundOnOff()"><span>Выкл. звук</span></div>
+                </div>
+            </div>
+
+            <div id="bucketWrapper">
+                <div id="countdown"></div>
+                <div class="background"></div>
+            </div>
+
+            <div id="rightBar">
+                <div id="h2"></div>
+                <h4 class="title">classic</h4>
+
+                <div id="bucketWrapperNext">
+                    <p>Следующая фигура:</p>
+                </div>
+                <div id="time">Время:<br><span class="value">--:--:--</span></div>
+                <div id="level">Уровень:<br><span class="value">---</span></div><br>
+                <div id="score">Очки:<br><span class="value">------</span></div>
+                <div id="scoreHigh">Мой рекорд:<br><span class="value">------</span></div><br>
+                <div id="line">Линий:<br><span class="value">----</span></div><br>
+            </div>
+        </div>
+        <span id="credit"><small>&copy; advizo_games 2016. музыка: Dubmood/Razor911, design & programming Sergey Korshunov.</small> <small class="version">Tetris classic v0.9</small></span>
+    </div>
+
+    <div id="gameOver" class="modal">
+        <!--<div class="close">×</div>-->
+
+        <h3>Игра окончена!</h3>
+        <h4 id="gameScore">Набрано очков за игру: <b class="value"></b></h4>
+        <h5 id="newRecord">Новый рекорд: <b class="value"></b>!!!</h5>
+        <div class="controls">
+            <div class="btn new"><span>Сыграть еще разок!</span></div>
+            <div class="small btn"><span>В другой раз</span></div>
+        </div>
+    </div>
+
+    <div id="endOfGame" class="modal">
+        <!--<div class="close">×</div>-->
+        <h3>Текущая игра, будет завершена, вы уверены?</h3>
+        <div class="controls">
+            <div class="btn goToStart"><span>Да</span></div>
+            <div class="btn"><span>Нет</span></div>
+        </div>
+    </div>
+
+
+    <div id="startNewGame" class="modal">
+        <!--<div class="close">×</div>-->
+        <h3>Текущая игра будет завершена, вы уверены?</h3>
+        <div class="controls">
+            <div class="btn new"><span>Да</span></div>
+            <div class="btn"><span>Нет</span></div>
+        </div>
+    </div>
+
+
+    <div id="info" class="modal">
+        <!--<div class="close">×</div>-->
+        <h3><span>Информация</span></h3>
+
+        <p>Классическая игра «Тетрис». Управление:</p>
+        <p><span class="key">&#8678;</span> - влево, <span class="key">	&#8680;</span> - вправо, <span class="key">&#8679;</span> - повернуть, <span class="key">&#8681;</span> - ускорить</p>
+        <p><span class="key">«пробел»</span> - сбросить фигуру вниз, <span class="key">«P»(англ.)</span> - пауза</p>
+        <br>
+        <p><i>По всем вопросам: пишите на games@advizo.ru</i></p>
+
+        <div class="controls">
+            <div class="btn"><span>Все понятно!</span></div>
+        </div>
+    </div>
+
+    <script src="lib/howler.min.js"></script>
+    <script src="src/splash-page.js"></script>
+    <script src="src/main.js"></script>
+    <script src="src/games/tetramino/audio.js"></script>
+    <script src="src/games/tetramino/game.js"></script>
+    <script src="src/game.js"></script>
+
+</body>
+</html>
