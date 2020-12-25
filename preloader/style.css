@@ -1,0 +1,74 @@
+/***********************
+* Cubic Loader Style
+* html: <div class="cubic-loader"><div class="cubic-loader-inner"></div></div>
+**********************/
+.cubic-loader {
+	left: 50%;					
+	top:  50%;
+	margin-left: -25px;
+	margin-top:  -25px;
+}
+
+.cubic-loader, 
+.cubic-loader-inner {
+	position: absolute;
+	height: 50px;
+	width:  50px;
+}
+
+/*common block style*/
+.cubic-loader::before,
+.cubic-loader::after,
+.cubic-loader-inner::before,
+.cubic-loader-inner::after {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 45%;
+	width:  45%;
+	background: #ececec;
+
+	/*animation common*/
+	animation-duration: 0.6s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+/*block styles*/
+.cubic-loader::before 			{ left:0;  top:0; 	 animation-name: cubicLoaderBlock1;}
+.cubic-loader::after 			{ right:0; top:0; 	 animation-name: cubicLoaderBlock2;}
+.cubic-loader-inner::before 	{ right:0; bottom:0; animation-name: cubicLoaderBlock3;}
+.cubic-loader-inner::after 		{ left:0;  bottom:0; animation-name: cubicLoaderBlock4;}
+
+/*animation @keyframes*/
+@keyframes cubicLoaderBlock1 {
+	0%   { background: #52aff1;}
+	25%  { background: #ececec;}
+	50%  { background: #ececec;}
+	75%  { background: #ececec;}
+	100% { background: #52aff1;}
+}	
+
+@keyframes cubicLoaderBlock2 {
+	0%   { background: #ececec;}
+	25%  { background: #52aff1;}
+	50%  { background: #ececec;}
+	75%  { background: #ececec;}
+	100% { background: #ececec;}
+} 
+
+@keyframes cubicLoaderBlock3 {
+	0%   { background: #ececec;}
+	25%  { background: #ececec;}
+	50%  { background: #52aff1;}
+	75%  { background: #ececec;}
+	100% { background: #ececec;}
+} 
+
+@keyframes cubicLoaderBlock4 {
+	0%   { background: #ececec;}
+	25%  { background: #ececec;}
+	50%  { background: #ececec;}
+	75%  { background: #52aff1;}
+	100% { background: #ececec;}
+}
