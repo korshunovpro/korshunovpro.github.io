@@ -1,0 +1,3 @@
+[submodule "css-preloader-adobe-like"]
+	path = css-preloader-adobe-like
+	url = git@github.com:korshunovpro/css-preloader-adobe-like.git
