@@ -1,0 +1,165 @@
+body {
+    width:960px;
+    margin:100px auto auto auto;
+    font-family: "Calibri", Serif;
+    font-size:14px;
+}
+
+.wire {
+    width:900px;
+    height:150px;
+    margin:0 30px;
+    position: relative;
+}
+
+.wire {
+    border-top:1px solid #000;
+}
+
+.wire.row2.right {
+    border-right:1px solid #000;
+}
+
+.wire.row2.left {
+    border-left:1px solid #000;
+}
+
+.input {
+    position: absolute;
+    left:-12px;
+    width:12px;
+    top:-6px;
+    height:12px;
+    background: blue;
+    border-radius: 10px;
+    line-height:12px;
+}
+
+.input span {
+    line-height:12px;
+    text-align: right;
+    position: absolute;
+    width:155px;
+    left:-160px;
+    font-style: italic;
+    font-weight:bold;
+}
+
+.terminator {
+    position: absolute;
+    right:-9px;
+    width:16px;
+    top:-6px;
+    height:12px;
+    background: #000;
+    border-radius: 3px;
+    line-height:12px;
+}
+
+.terminator span {
+    line-height:12px;
+    text-align: left;
+    position: absolute;
+    width:155px;
+    right:-160px;
+    font-style: italic;
+    font-weight:bold;
+}
+
+.device {
+    position: relative;
+    top:-40px;
+    width:80px;
+    height:80px;
+    background: #000;
+    float: left;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.device .lamp {
+    position: relative;
+    width:70px;
+    height:70px;
+    margin:0 auto;
+    top:4px;
+    border-radius:50px;
+    background: #444444;
+    overflow: hidden;
+}
+
+.device .light {
+    position: absolute;
+    background: #fff;
+    opacity: 0;
+    width:100%;
+    height:100%;
+}
+
+.device .light.on {
+    opacity: 1;
+}
+
+.device h4 {
+    text-align: center;
+    position: absolute;
+    bottom:-40px;
+    width:100px;
+    left:50%;
+    margin-left:-50px;
+    font-weight:normal;
+    color: blue;
+    text-transform: uppercase;
+}
+
+.device h5 {
+    text-align: center;
+    position: absolute;
+    top:-35px;
+    width:100px;
+    left:50%;
+    margin-left:-50px;
+    text-transform: uppercase;
+}
+
+    /*par*/
+.device.par {
+    top:-26px;
+    width:50px;
+    height:50px;
+}
+
+.device.par .lamp {
+    width:40px;
+    height:40px;
+    margin:0 auto;
+    top:5px;
+}
+
+/*strobe*/
+.device.strobe {
+    top:-19px;
+    width:36px;
+    height:36px;
+}
+
+.device.strobe .lamp {
+    width:26px;
+    height:26px;
+    margin:0 auto;
+    top:5px;
+}
+
+/*strobe*/
+.device.head {
+    border-radius:12px;
+}
+
+.device.head .lamp {
+    width:40px;
+    height:40px;
+    left:20px;
+    top:20px;
+    margin:0;
+    border-radius: 15px;
+}

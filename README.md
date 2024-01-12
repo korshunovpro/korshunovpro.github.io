@@ -5,3 +5,5 @@
 [Tetris test](https://korshunovpro.github.io/tetro/index.html)
 
 [preloader](https://korshunovpro.github.io/preloader/index.html)
+
+[dmxer](https://korshunovpro.github.io/dmxer/index.html)
